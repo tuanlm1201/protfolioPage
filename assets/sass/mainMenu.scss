@@ -1,3 +1,4 @@
+@import './variables';
 @import './leftMenu.scss';
 @import './rightMenu.scss';
 
@@ -64,33 +65,35 @@
         margin-bottom: 70px;
 
         .content-section__heading {
-            font-weight: bold;
-            font-size  : 3.2rem;
-            color      : $black;
+            font-weight  : bold;
+            font-size    : 3.2rem;
+            color        : $black;
+            margin-bottom: 25px;
         }
 
         .content-section__sub-heading {
-            width      : 438px;
-            margin     : 0px auto;
-            font-size  : 1.5;
-            line-height: 2.4rem;
-            color      : $paragraphFont;
+            width        : 438px;
+            margin       : 0px auto;
+            font-size    : 1.5;
+            line-height  : 2.4rem;
+            color        : $paragraphFont;
+            margin-bottom: 50px;
         }
 
+        // My Services 
         .content-services {
             display              : grid;
             grid-template-columns: repeat(3, 1fr);
             gap                  : 20px;
-            margin-top           : 50px;
 
             .card-items {
-                background-color: $white;
-                width           : 310px;
-                display         : flex;
-                flex-direction  : column;
-                align-items     : center;
-                padding         : 28px;
-                border          : 1px solid $white;
+                background-color   : $white;
+                width              : 310px;
+                // display         : flex;
+                // flex-direction  : column;
+                // align-items     : center;
+                padding            : 28px;
+                border             : 1px solid $white;
 
                 .card-items__img {
                     width : 68px;
@@ -110,20 +113,21 @@
                     color        : $paragraphFont;
                     margin-bottom: 14px;
                 }
-                .card-items__link{
-                    background: transparent;
+
+                .card-items__link {
+                    background     : transparent;
                     text-decoration: none;
-                    text-transform: uppercase;
-                    font-size: 1.2rem;
-                    line-height: 1.4rem;
-                    font-weight: bold;
-                    color: $yellow400;
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
+                    text-transform : uppercase;
+                    font-size      : 1.2rem;
+                    line-height    : 1.4rem;
+                    font-weight    : bold;
+                    color          : $yellow400;
+                    display        : flex;
+                    align-items    : center;
+                    cursor         : pointer;
                 }
 
-                .card-items__link:hover{
+                .card-items__link:hover {
                     text-decoration: underline;
                 }
 
@@ -131,6 +135,194 @@
                     border    : 1px solid $yellow400;
                     transition: .3s;
                     opacity   : 0.9;
+                }
+            }
+        }
+
+        // Price Plan 
+        .card-pricePlan {
+            @include flex();
+            justify-content: space-between;
+
+            &__items {
+                @include flex($direction: column);
+                align-items             : center;
+                padding                 : 55px 25px 25px 25px;
+                min-height              : 500px;
+                width                   : 309px;
+                background-color        : $white;
+                position                : relative;
+                top                     : 0;
+
+                &:hover {
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+                }
+
+                &.card-pricePlan__items--gold::before {
+                    content         : "Most Popular";
+                    position        : absolute;
+                    top             : 0;
+                    width           : 100%;
+                    height          : 30px;
+                    text-align      : center;
+                    font-size       : 1.4rem;
+                    line-height     : 3rem;
+                    background-color: $yellow400;
+                }
+
+                .card-pricePlan__category {
+                    font-size    : 2.4rem;
+                    font-weight  : 600;
+                    color        : $black;
+                    margin-bottom: 20px;
+                }
+
+                .card-pricePlan__price {
+                    font-size     : 1.5rem;
+                    color         : $black;
+                    text-transform: capitalize;
+                    margin-bottom : 8px;
+
+                    span {
+                        font-size  : 3.2rem;
+                        font-weight: bold;
+                    }
+                }
+
+                .card-pricePlan__desc {
+                    text-align    : center;
+                    font-size     : 1.5rem;
+                    color         : $paragraphFont;
+                    line-height   : 2.4rem;
+                    text-transform: capitalize;
+                    margin-bottom : 20px;
+                }
+
+                .card-pricePlan__service {
+                    width                   : 100%;
+                    @include flex($direction: column);
+                    font-size               : 1.5rem;
+                    line-height             : 2.4rem;
+
+                    &-items {
+                        @include flex();
+                        align-items   : center;
+                        text-transform: capitalize;
+
+                        svg {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    &-items:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+
+                    &-items.unchecked {
+                        color: $paragraphFont;
+                    }
+
+                    &-items.checked {
+                        color: $black;
+                    }
+
+
+                }
+
+                .card-pricePlan__btn {
+                    width        : 170px;
+                    font-size    : 1.4rem;
+                    font-weight  : bold;
+                    line-height  : 1.7px;
+                    border       : 0;
+                    outline      : 0;
+                    margin-top   : 20px;
+                    background   : $white;
+                    box-shadow   : 0px 1px 10px rgba(0, 0, 0, 0.15);
+                    border-radius: 30px;
+                    cursor       : pointer;
+
+                    &:hover {
+                        background-color: $yellow400;
+                        transition      : all .4s;
+                    }
+                }
+
+            }
+        }
+
+        // Recommendations
+        .list-recommendations {
+            width: 100%;
+            @include flex();
+            overflow-x                : auto;
+
+
+            .items-recommendations {
+                width            : 310px;
+                min-height       : 323px;
+                background-color : white;
+                padding          : 25px 17px;
+                margin-right     : 27px;
+                flex-shrink      : 0;
+
+                &__rating {
+                    margin-bottom: 17px;
+                }
+
+                &__title {
+                    font-size    : 1.8rem;
+                    font-weight  : 500;
+                    line-height  : 2.2rem;
+                    color        : $black;
+                    margin-bottom: 18px;
+                }
+
+                &__content {
+                    font-size         : 1.5rem;
+                    line-height       : 2.2rem;
+                    text-transform    : capitalize;
+                    color             : $paragraphFont;
+                    word-wrap         : break-word;
+                    overflow          : hidden;
+                    display           : block;
+                    display           : -webkit-box;
+                    text-overflow     : ellipsis;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 4;
+                }
+
+                &__author {
+                    @include flex();
+                    align-items: center;
+                    margin-top : 30px;
+
+                    &-img {
+                        width          : 80px;
+                        height         : 80px;
+                        display        : block;
+                        text-decoration: none;
+                        border-radius  : 50%;
+                    }
+
+                    &-profile {
+                        flex-grow     : 1;
+                        text-transform: capitalize;
+                        padding       : 0px 13px;
+
+                        .items-recommendations__author-name {
+                            font-size  : 1.8rem;
+                            font-weight: 500;
+                            line-height: 2.2rem;
+                            color      : $black;
+                        }
+
+                        .items-recommendations__author-service {
+                            font-size  : 1.5rem;
+                            line-height: 2.4rem;
+                            color      : $paragraphFont;
+                        }
+                    }
                 }
             }
         }

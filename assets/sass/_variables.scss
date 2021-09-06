@@ -1,0 +1,21 @@
+$yellow400    : #FFB400;
+$yellow95     : rgba(255, 180, 0, 0.95);
+$black        : #2B2B2B;
+$dark181      : #18191A;
+$dark3A       : #3A3B3C;
+$dark242      : #242526;
+$paragraphFont: #767676;
+$backGround   : #F0F0F6;
+$grayE4       : #E4E6EB;
+$grayE4       : #E4E6EB;
+$white        : #FFFFFF;
+
+@mixin flex($direction:row) {
+    display:flex;
+    flex-direction: $direction;
+}
+
+
+
+
+
