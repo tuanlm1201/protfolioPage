@@ -1,0 +1,10 @@
+@import './base.scss';
+
+.menu-right{
+    order: 3;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: $yellow95;
+    height: 100px;
+}

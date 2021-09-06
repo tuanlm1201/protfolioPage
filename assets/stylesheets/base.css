@@ -1,0 +1,19 @@
+.container {
+  width: 970px;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+.btn {
+  line-height: 1.6rem;
+  padding: 16px 32px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*# sourceMappingURL=base.css.map */
