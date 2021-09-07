@@ -20,6 +20,10 @@ html {
     justify-content: center;
 }
 
+.border-b{
+    border-bottom: 1px solid $backGround;
+}
+
 
 .btn{
     line-height: 1.6rem;

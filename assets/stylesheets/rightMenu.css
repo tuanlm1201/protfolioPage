@@ -21,6 +21,10 @@ html {
   justify-content: center;
 }
 
+.border-b {
+  border-bottom: 1px solid #F0F0F6;
+}
+
 .btn {
   line-height: 1.6rem;
   padding: 16px 32px;
