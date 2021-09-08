@@ -69,6 +69,13 @@ html {
 .menu-left .profile__social-media-link:not(:last-child) {
   margin-right: 15px;
 }
+.menu-left .profile__social-media-link:hover {
+  opacity: 0.8;
+}
+.menu-left .about {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 .menu-left .about__items {
   display: flex;
   flex-direction: row;
@@ -84,6 +91,141 @@ html {
 .menu-left .about__items-heading {
   background-color: #FFB400;
   padding: 0px 7px 0px 5px;
+}
+.menu-left .skills {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.menu-left .skills__heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  text-transform: capitalize;
+  color: #2B2B2B;
+  margin-bottom: 15px;
+}
+.menu-left .skills-items__name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 9px;
+  margin-bottom: 5px;
+}
+.menu-left .skills-items__percentage {
+  --widthPoint:100%;
+  width: 100%;
+  height: 6px;
+  border: 0.5px solid #FFB400;
+  border-radius: 30px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+}
+.menu-left .skills-items__percentage--100, .menu-left .skills-items__percentage--90, .menu-left .skills-items__percentage--85, .menu-left .skills-items__percentage--80, .menu-left .skills-items__percentage--75, .menu-left .skills-items__percentage--60 {
+  height: 2px;
+  background-color: #FFB400;
+  transition: animation 0.6;
+}
+.menu-left .skills-items__percentage--100 {
+  width: 100%;
+  animation: percentagePoint 3s 1s;
+}
+@keyframes percentagePoint {
+  0% {
+    width: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.menu-left .skills-items__percentage--90 {
+  width: 90%;
+  animation: percentagePoint 3s 1s;
+}
+@keyframes percentagePoint {
+  0% {
+    width: 0%;
+  }
+  100% {
+    opacity: 90%;
+  }
+}
+.menu-left .skills-items__percentage--85 {
+  width: 85%;
+  animation: percentagePoint 3s 1s;
+}
+@keyframes percentagePoint {
+  0% {
+    width: 0%;
+  }
+  100% {
+    opacity: 85%;
+  }
+}
+.menu-left .skills-items__percentage--80 {
+  width: 80%;
+  animation: percentagePoint 3s 1s;
+}
+@keyframes percentagePoint {
+  0% {
+    width: 0%;
+  }
+  100% {
+    opacity: 80%;
+  }
+}
+.menu-left .skills-items__percentage--75 {
+  width: 75%;
+  animation: percentagePoint 3s 1s;
+}
+@keyframes percentagePoint {
+  0% {
+    width: 0%;
+  }
+  100% {
+    opacity: 75%;
+  }
+}
+.menu-left .skills-items__percentage--60 {
+  width: 60%;
+  animation: percentagePoint 3s 1s;
+}
+@keyframes percentagePoint {
+  0% {
+    width: 0%;
+  }
+  100% {
+    opacity: 75%;
+  }
+}
+.menu-left .skills__list {
+  display: flex;
+  flex-direction: column;
+}
+.menu-left .skills__list-items {
+  display: flex;
+  align-items: center;
+}
+.menu-left .skills__list-items p {
+  margin-left: 15px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: #767676;
+}
+.menu-left .btn--downloadCV {
+  width: 100%;
+  height: 40px;
+  border: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-transform: uppercase;
+  color: #2B2B2B;
+  background-color: #FFB400;
+  cursor: pointer;
+}
+.menu-left .btn--downloadCV:hover {
+  background-color: #df9e07;
 }
 
 .container {
@@ -124,13 +266,39 @@ html {
 
 .menu-right {
   order: 3;
-  position: sticky;
-  top: 0;
-  right: 0;
-  background-color: rgba(255, 180, 0, 0.95);
-  height: 100px;
+  width: 108px;
+  min-height: 700px;
+  height: 100%;
+  padding: 20px 0px 50px;
+  margin-left: 30px;
+  background: #FAFAFA;
+  box-shadow: 4px 0px 10px rgba(47, 122, 249, 0.1);
 }
-
+.menu-right .nav__items {
+  position: relative;
+  top: 0;
+  border-radius: 50%;
+  background: #F0F0F6;
+  width: 40px;
+  height: 40px;
+  margin-top: 43px;
+  transition: all 0.3s;
+}
+.menu-right .nav__items:hover {
+  background-color: #FFB400;
+}
+.menu-right .nav__items:hover svg path {
+  fill: #18191A;
+}
+.menu-right .nav__items-popup {
+  position: absolute;
+  top: -100%;
+  background: #18191A;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  padding: 0px 10px;
+}
 .wapper {
   margin: 0px auto;
   background-color: #F0F0F6;
@@ -579,6 +747,22 @@ html {
 .wapper .map iframe {
   width: 100%;
   height: 300px;
+}
+.wapper .logo {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.wapper .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  text-transform: capitalize;
+  color: #2B2B2B;
+  background-color: #FFFFFF;
 }
 
 /*# sourceMappingURL=mainMenu.css.map */

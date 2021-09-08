@@ -32,10 +32,15 @@
                 &:not(:last-child){
                     margin-right: 15px;
                 }
+                &:hover{
+                    opacity: 0.8;
+                }
             }
         }
     }
     .about{
+        padding-top: 25px;
+        padding-bottom: 25px;
         &__items{
             @include flex();
             justify-content: space-between;
@@ -51,6 +56,100 @@
                 background-color: $yellow400;
                 padding: 0px 7px 0px 5px;
             }
+        }
+    }
+    .skills{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        &__heading{
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 2.2rem;
+            text-transform: capitalize;
+            color: $black;
+            margin-bottom: 15px;
+        }
+        &-items{
+            &__name{
+                @include flex();
+                justify-content: space-between;
+                margin-top: 9px;
+                margin-bottom: 5px;
+            }
+            &__percentage{
+                --widthPoint:100%;
+                width: 100%;
+                height: 6px;
+                border: 0.5px solid $yellow400;
+                border-radius: 30px;
+                padding: 1px;
+                display: flex;
+                align-items: center;
+                &--100,&--90,&--85,&--80,&--75,&--60{
+                    height: 2px;
+                    background-color: $yellow400;
+                    transition: animation 0.6;
+                }
+                &--100{
+                    width: 100%;
+                    animation: percentagePoint 3s 1s;
+                    @include percentage($widthPoint:100%);
+                }
+                &--90{
+                    width: 90%;
+                    animation: percentagePoint 3s 1s;
+                    @include percentage($widthPoint:90%);
+                }
+                &--85{
+                    width: 85%;
+                    animation: percentagePoint 3s 1s;
+                    @include percentage($widthPoint:85%);
+                }
+                &--80{
+                    width: 80%;
+                    animation: percentagePoint 3s 1s;
+                    @include percentage($widthPoint:80%);
+                }
+                &--75{
+                    width: 75%;
+                    animation: percentagePoint 3s 1s;
+                    @include percentage($widthPoint:75%);
+                }
+                &--60{
+                    width: 60%;
+                    animation: percentagePoint 3s 1s;
+                    @include percentage($widthPoint:75%);
+                }
+            }
+        }
+        &__list{
+            display: flex;
+            flex-direction: column;
+            &-items{
+                display: flex;
+                align-items: center;
+                p{
+                    margin-left: 15px;
+                    font-size: 1.5rem;
+                    line-height: 2.4rem;
+                    color:$paragraphFont;
+                }
+            }
+        }
+    }
+    .btn--downloadCV{
+        width: 100%;
+        height: 40px;
+        border: none;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-transform: uppercase;
+        color: #2B2B2B;
+        background-color: $yellow400;
+        cursor: pointer;
+        &:hover{
+            background-color: #df9e07;
         }
     }
 }

@@ -2,9 +2,45 @@
 
 .menu-right{
     order: 3;
-    position: sticky;
-    top: 0;
-    right: 0;
-    background-color: $yellow95;
-    height: 100px;
+    width: 108px;
+    min-height: 700px;
+    height: 100%;
+    padding: 20px 0px 50px;
+    margin-left: 30px;
+    background: #FAFAFA;
+    box-shadow: 4px 0px 10px rgba(47, 122, 249, 0.1);
+    .nav{
+        &__items{
+            position: relative;
+            top: 0;
+            border-radius: 50%;
+            background: $backGround;
+            width: 40px;
+            height: 40px;
+            margin-top: 43px;
+            transition: all 0.3s;
+            &:hover{
+                background-color: $yellow400;
+                &{
+                    svg{
+                        path{
+                            fill: $dark181;
+                        }
+                    }
+                }
+            }  
+            &-popup{
+                position: absolute;
+                top: -100%;
+                background: $dark181;
+                color: $white;
+                font-size: 1.5rem;
+                line-height: 2.4rem;
+                padding: 0px 10px;
+                &:before{
+                    
+                }
+            } 
+        }
+    }
 }

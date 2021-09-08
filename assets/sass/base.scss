@@ -33,3 +33,14 @@ html {
 .text-center{
     text-align: center;
 }
+
+@mixin percentage($widthPoint:100%){
+    @keyframes percentagePoint{
+        0%{
+            width: 0%;
+        }
+        100%{
+            opacity: $widthPoint;
+        }
+    }
+}

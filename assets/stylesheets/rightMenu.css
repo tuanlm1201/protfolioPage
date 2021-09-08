@@ -36,11 +36,38 @@ html {
 
 .menu-right {
   order: 3;
-  position: sticky;
+  width: 108px;
+  min-height: 700px;
+  height: 100%;
+  padding: 20px 0px 50px;
+  margin-left: 30px;
+  background: #FAFAFA;
+  box-shadow: 4px 0px 10px rgba(47, 122, 249, 0.1);
+}
+.menu-right .nav__items {
+  position: relative;
   top: 0;
-  right: 0;
-  background-color: rgba(255, 180, 0, 0.95);
-  height: 100px;
+  border-radius: 50%;
+  background: #F0F0F6;
+  width: 40px;
+  height: 40px;
+  margin-top: 43px;
+  transition: all 0.3s;
+}
+.menu-right .nav__items:hover {
+  background-color: #FFB400;
+}
+.menu-right .nav__items:hover svg path {
+  fill: #18191A;
+}
+.menu-right .nav__items-popup {
+  position: absolute;
+  top: -100%;
+  background: #18191A;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  padding: 0px 10px;
 }
 
 /*# sourceMappingURL=rightMenu.css.map */
