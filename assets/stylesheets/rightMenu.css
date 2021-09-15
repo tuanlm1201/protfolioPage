@@ -1,10 +1,13 @@
 .container {
   width: 970px;
+  position: relative;
+  top: 0;
 }
 
 html {
   font-family: "Inter", sans-serif;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .flexCenterRow {
@@ -26,7 +29,7 @@ html {
 }
 
 .btn {
-  line-height: 1.6rem;
+  display: inline-block;
   padding: 16px 32px;
 }
 
@@ -35,6 +38,8 @@ html {
 }
 
 .menu-right {
+  position: sticky;
+  top: 0;
   order: 3;
   width: 108px;
   min-height: 700px;
@@ -60,14 +65,28 @@ html {
 .menu-right .nav__items:hover svg path {
   fill: #18191A;
 }
+.menu-right .nav__items:hover > .nav__items-popup {
+  display: block;
+}
 .menu-right .nav__items-popup {
   position: absolute;
-  top: -100%;
+  top: -80%;
   background: #18191A;
   color: #FFFFFF;
-  font-size: 1.5rem;
-  line-height: 2.4rem;
-  padding: 0px 10px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding: 5px;
+  border-radius: 2px;
+  display: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.menu-right .nav__items-popup:before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  border-bottom: 1rem solid #2B2B2B;
+  border-left: 1rem solid transparent;
+  transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=rightMenu.css.map */

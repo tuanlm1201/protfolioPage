@@ -3,8 +3,11 @@
 .menu-left{
     background-color: $white;
     width: 305px;
+    min-height: 700px;
+    height: 100%;
     padding: 50px 45px 25px 40px;
     margin-right: 30px;
+    z-index: 99;
     .profile{
         &__name{
             font-size: 1.8rem;
@@ -86,7 +89,7 @@
                 display: flex;
                 align-items: center;
                 &--100,&--90,&--85,&--80,&--75,&--60{
-                    height: 2px;
+                    height: 3px;
                     background-color: $yellow400;
                     transition: animation 0.6;
                 }
