@@ -9,17 +9,18 @@
     height: 100%;
     padding: 20px 0px 50px;
     margin-left: 30px;
-    background: #FAFAFA;
-    box-shadow: 4px 0px 10px rgba(47, 122, 249, 0.1);
+    background: transparent;
+    // box-shadow: 4px 0px 10px rgba(47, 122, 249, 0.1);
     .nav{
         &__items{
             position: relative;
             top: 0;
             border-radius: 50%;
-            background: $backGround;
+            background: $white;
+            box-shadow: 4px 0px 10px rgba(47, 122, 249, 0.1);
             width: 40px;
             height: 40px;
-            margin-top: 43px;
+            margin-top: 20px;
             transition: all 0.3s;
             &:hover{
                 background-color: $yellow400;

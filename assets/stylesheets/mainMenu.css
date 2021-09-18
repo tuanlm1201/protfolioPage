@@ -282,17 +282,17 @@ html {
   height: 100%;
   padding: 20px 0px 50px;
   margin-left: 30px;
-  background: #FAFAFA;
-  box-shadow: 4px 0px 10px rgba(47, 122, 249, 0.1);
+  background: transparent;
 }
 .menu-right .nav__items {
   position: relative;
   top: 0;
   border-radius: 50%;
-  background: #F0F0F6;
+  background: #FFFFFF;
+  box-shadow: 4px 0px 10px rgba(47, 122, 249, 0.1);
   width: 40px;
   height: 40px;
-  margin-top: 43px;
+  margin-top: 20px;
   transition: all 0.3s;
 }
 .menu-right .nav__items:hover {
@@ -393,7 +393,7 @@ html {
 .wapper .content-section .content-section__sub-heading {
   width: 438px;
   margin: 0px auto;
-  font-size: 1.5;
+  font-size: 1.5rem;
   line-height: 2.4rem;
   color: #767676;
   margin-bottom: 50px;
@@ -785,17 +785,6 @@ html {
   margin-top: 70px;
   display: flex;
   justify-content: space-between;
-}
-.wapper .footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
-  font-size: 1.5rem;
-  line-height: 2.4rem;
-  text-transform: capitalize;
-  color: #2B2B2B;
-  background-color: #FFFFFF;
 }
 
 /*# sourceMappingURL=mainMenu.css.map */

@@ -81,7 +81,7 @@
         .content-section__sub-heading {
             width        : 438px;
             margin       : 0px auto;
-            font-size    : 1.5;
+            font-size    : 1.5rem;
             line-height  : 2.4rem;
             color        : $paragraphFont;
             margin-bottom: 50px;
@@ -548,17 +548,5 @@
         margin-top     : 70px;
         display        : flex;
         justify-content: space-between;
-    }
-
-    .footer {
-        display         : flex;
-        align-items     : center;
-        justify-content : center;
-        height          : 60px;
-        font-size       : 1.5rem;
-        line-height     : 2.4rem;
-        text-transform  : capitalize;
-        color           : $black;
-        background-color: $white;
     }
 }
