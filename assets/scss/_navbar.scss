@@ -1,0 +1,28 @@
+.navbar {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 99;
+
+  &-link {
+    text-decoration: none;
+    color: $white;
+    font-weight: bold;
+    line-height: 1.5rem;
+    padding: 10px;
+    min-width: 85px;
+    text-align: center;
+    border-radius: 2rem;
+    margin-left: 3px;
+    transition: all 0.3s linear;
+
+    &:hover,
+    &_active {
+      background-color: $white;
+      color: $black;
+      border-radius: 2rem;
+    }
+  }
+}
