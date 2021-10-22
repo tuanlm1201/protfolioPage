@@ -1,18 +1,33 @@
-@import './variables';
-@import './reset';
-@import './navbar';
-@import './hero';
+@import "./variables";
+@import "./reset";
+@import "./navbar";
+@import "./hero";
+@import "./berries";
 
-html{
-    font-family: 'Montserrat', sans-serif;
-    font-size:  62.5%;
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
 }
 
-.app{
-    background-color: #D7D7D7;
-    
-    .container-nav{
-        margin: 0px auto;
-        width: 1365px;
-    }
+.app {
+  background-color: #d7d7d7;
+
+  .container--xl {
+    margin: 0px auto;
+    width: 1500px;
+  }
+
+  .container--l {
+    margin: 0px auto;
+    width: 1365px;
+  }
+
+  .container--m {
+    margin: 0px auto;
+    width: 1066px;
+  }
+
+  .container__hero {
+    background: linear-gradient(108deg, #d7d7d7 50%, $black 40%);
+  }
 }

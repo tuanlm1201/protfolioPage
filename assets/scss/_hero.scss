@@ -1,3 +1,4 @@
+
 .hero {
   position: relative;
   top: 0;
@@ -5,12 +6,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 92px;
 
   &::after {
     content: "";
     width: 100%;
     height: 2000px;
-    background-color: $black;
+    // background-color: $black;
     position: absolute;
     top: -200px;
     right: -40%;
@@ -18,7 +20,7 @@
     transform: rotate(9.67deg);
   }
 
-  &-info {
+  &__info {
     position: relative;
     z-index: 99;
     color: $black;
@@ -41,10 +43,29 @@
     }
   }
 
-  &-avatar{
+  &__avatar{
       img{
           width: 783px;
       }
       z-index: 2;
   }
+
+  &__socail{
+    margin-top: 126px;
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    
+    &-link{
+      text-decoration: none;
+      background-color: #C4C4C4;
+      padding: 10px 10px 2px 10px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      &:hover{
+        box-shadow: unset;
+      }
+    }
+  }
+  
 }
